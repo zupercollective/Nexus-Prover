@@ -49,7 +49,15 @@ sudo apt install pkg-config
 
 ## 3. Execution
 
-### 3.1 Run Prover
+### 3.1 Create a Session
+
+Ubah `<SESSION_NAME>` menjadi terserahmu.
+
+```
+tmux new -s <SESSION_NAME>
+```
+
+### 3.2 Run Prover
 
 ```
 curl https://cli.nexus.xyz/install.sh | sh
@@ -61,7 +69,7 @@ Kalo kalian belum instal `Rust`, nanti akan otomatis diminta instal, cukup tekan
 . "$HOME/.cargo/env"
 ```
 
-### 3.2 Back up `prover-id`
+### 3.3 Back up `prover-id`
 
 Setelah berhasil run prover, akan muncul `prover identifier`, simpan itu.
 
