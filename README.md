@@ -1,57 +1,81 @@
-Penulis: [nama_penulis](link_twt)
+Penulis: [Naufal](https://x.com/0xfal)
 
-# Pengenalan
-Bab ini berisi pengenalan mengenai nama_project
-
-## Nama_Project
 > [!NOTE]
-> berikan_description_singkat_mengenai_project_tersebut
+> **WHAT IS Nexus?**\
+> .
 
-### Investor
-taroh_img_investor_jika_ada
+# Tutorial Nexus Prover CLI
 
-# Tutorial XXX
-Bab ini berisi tutorial cara menjalankan XXX
+## 1. Requirement
 
-## Requirement
-Syarat menjalankan XXX
-- Spek Komputer
-  
-| Name | Minimum |
-| ------------- | ------------- |
-| Operating System  | OS_NAME  |
-| CPU  | X Cores  |
-| RAM  | X GB  |
-| SSD  | XX GB  |
-- item_2_dan_seterusnya_jika_ada
+Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
-> [!TIP]
-> Kami menggunakan Digital Ocean dengan speksifikasi `XX/ X Core/ X GB RAM/ XX GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
-  
-## Dependencies
+| ✅ Linux | ✅ macOS | ✅ Windows (Native / WSL) |
+| ------------- | ------------- | ------------- |
 
-### Install X 
+| Part | Minimum | Recommended |
+| ------------- | ------------- | ------------- |
+| CPU | - | - |
+| RAM | 4 GB | 8 GB |
+| SSD | - | - |
+
+Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
+
+## 2. Dependency
+
+### 2.1 Install `curl`
+
 ```
-sudo apt-get install xxxx
+sudo apt install curl
 ```
 
-## Menjalankan XXX
+### 2.2 Install `gcc`
 
-### Run XXX
 ```
-code blocks for commands
+sudo apt install gcc
 ```
 
-## Help
+### 2.3 Install `libssl-dev`
 
-Join komunitas [Discord ZuperHunt](https://t.co/n7TeWVlA48) jika kamu ada pertanyaan.
+```
+sudo apt install libssl-dev
+```
 
-## Change Logs
+### 2.4 Install `pkg-config`
 
-* 0.0.1
-    * Initial Release
+```
+sudo apt install pkg-config
+```
 
-## Acknowledgments
+## 3. Execution
 
-Referensi
-* [nama_referensi](link_referensi)
+### 3.1 Run Prover
+
+```
+curl https://cli.nexus.xyz/install.sh | sh
+```
+
+Kalo kalian belum instal `Rust`, nanti akan otomatis diminta instal, cukup tekan `enter` aja. Kalo instal udah siap, jalankan perintah di bawah ini.
+
+```
+. "$HOME/.cargo/env"
+```
+
+### 3.2 Back up `prover-id`
+
+Setelah berhasil run prover, akan muncul `prover identifier`, simpan itu.
+
+# Tutorial Nexus Prover Web
+
+Klik [`Connect`](https://beta.nexus.xyz) and you good.
+
+![image](https://github.com/user-attachments/assets/de1810ee-b7ff-4345-84e0-8b221b1245f3)
+
+---
+
+Reach us if you have any question:\
+ZuperHunt's [Discord server](https://discord.gg/ZuperHunt) | [X(Twitter)](https://twitter.com/ZuperHunt)
+
+# Acknowledgements
+
+* [Nexus Docs](https://github.com/nexus-xyz/network-api/blob/main/clients/cli/README.md)
