@@ -1,6 +1,8 @@
 services:
   nexus:
     image: ghcr.io/zuperhunt/nexus-prover:latest
+    env_file:
+      - ./.env
     environment:
       - NONINTERACTIVE=1
     volumes:
