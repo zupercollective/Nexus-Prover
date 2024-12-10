@@ -1,10 +1,34 @@
-Penulis: [Naufal](https://x.com/0xfal)
+Penulis: 
+- [Naufal](https://x.com/0xfal)
+- [d04_1bu as Ikram](https://x.com/d04_1bu)
 
 > [!NOTE]
 > **WHAT IS Nexus?**\
 > .
 
 # Tutorial Nexus Prover CLI
+
+# Docker
+Requirement bisa merujuk pada sectiono di bawah. Cukup clone repository ini, install Docker dengan Docker Compose dan lakukan command di bawah ini:
+```bash
+# Clone aplikasinya dulu
+git clone https://github.com/ZuperHunt/Nexus-Prover
+
+# Masuk ke foldernya
+cd Nexus-Prover
+
+# Copy file secretnya
+cp .env.example .env
+
+# Isi secretnya
+nano .env
+
+# Jalankan server
+docker compose up -d
+```
+
+# Manual
+Langkah-langkah di bawah bisa kamu eksekusi apabila ingin menjalankan aplikasi ini secara manual.
 
 ## 1. Requirement
 
