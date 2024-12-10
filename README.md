@@ -4,7 +4,7 @@ Penulis:
 
 > [!NOTE]
 > **WHAT IS Nexus?**\
-> .
+> [Nexus](https://nexus.xyz) is the supercomputer for everyone, powering the world’s most complex computation to build the Verifiable Internet.
 
 # Tutorial Nexus Prover CLI
 
@@ -40,7 +40,7 @@ Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 | Part | Minimum | Recommended |
 | ------------- | ------------- | ------------- |
 | CPU | 1 Core | 2 Core |
-| RAM | 4 GB | 8 GB |
+| RAM | 1 GB | - |
 | SSD | - | - |
 
 Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
@@ -82,24 +82,34 @@ Ubah `<SESSION_NAME>` menjadi terserahmu.
 tmux new -s <SESSION_NAME>
 ```
 
-### 3.2 Replace Prover Id
+### 3.2 Create `.nexus` Directory (Optional)
 
-Gunakan **Prover Id** web prover mu, dengan cara tekan **F12** di browser trus cari **Application** dan copy value dari `flutter.proverId`. Balik ke CLI, dan isi hanya dengan Prover Id yang barusan dicopy.
+Cek terlebih dahulu apakah folder `.nexus` sudah ada atau belum menggunakan: `cd .nexus`.\
+Kalo tidak ditemukan, kamu bisa membuatnya dengan perintah berikut:
+
+```
+mkdir .nexus
+```
+
+### 3.3 Replace Prover Id
+
+Gunakan **Prover Id** web prover mu, dengan cara tekan **F12** di browser trus cari **Application** dan copy value dari `flutter.proverId`.
+
+![image](https://github.com/user-attachments/assets/82523934-7d78-4b9c-b651-cc3c4060252f)
+
+Balik ke CLI, jalankan perintah berikut dan isi hanya dengan Prover Id yang barusan dicopy.
 
 ```
 nano $HOME/.nexus/prover-id
 ```
 
-![image](https://github.com/user-attachments/assets/82523934-7d78-4b9c-b651-cc3c4060252f)
-
-
-### 3.3 Run Prover
+### 3.4 Run Prover
 
 ```
 curl https://cli.nexus.xyz/ | sh
 ```
 
-# Tutorial Nexus Prover Web
+# Web
 
 Klik [`Connect`](https://beta.nexus.xyz) and you good.
 
