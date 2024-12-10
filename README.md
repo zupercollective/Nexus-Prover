@@ -15,7 +15,7 @@ Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
 | Part | Minimum | Recommended |
 | ------------- | ------------- | ------------- |
-| CPU | - | - |
+| CPU | 1 Core | 2 Core |
 | RAM | 4 GB | 8 GB |
 | SSD | - | - |
 
@@ -23,28 +23,29 @@ Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mun
 
 ## 2. Dependency
 
-### 2.1 Install `curl`
+### 2.1 Install Rust
+
+Copy-paste, trus tinggal tekan enter aja.
 
 ```
-sudo apt install curl
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
 ```
 
-### 2.2 Install `gcc`
+### 2.2 Install Miscellaneous
 
 ```
-sudo apt install gcc
+sudo apt update && sudo apt upgrade
+sudo apt install build-essential pkg-config libssl-dev git-all
 ```
 
-### 2.3 Install `libssl-dev`
+### 2.3 Update Protoc
 
 ```
-sudo apt install libssl-dev
-```
-
-### 2.4 Install `pkg-config`
-
-```
-sudo apt install pkg-config
+sudo apt install unzip
+curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v29.1/protoc-29.1-linux-x86_64.zip
+unzip protoc-29.1-linux-x86_64.zip -d $HOME/.local
+export PATH="${HOME}/.local/bin":${PATH}
 ```
 
 ## 3. Execution
@@ -57,27 +58,28 @@ Ubah `<SESSION_NAME>` menjadi terserahmu.
 tmux new -s <SESSION_NAME>
 ```
 
-### 3.2 Run Prover
+### 3.2 Replace Prover Id
+
+Gunakan **Prover Id** web prover mu, dengan cara tekan **F12** di browser trus cari **Application** dan copy value dari `flutter.proverId`. Balik ke CLI, dan isi hanya dengan Prover Id yang barusan dicopy.
 
 ```
-curl https://cli.nexus.xyz/install.sh | sh
+nano $HOME/.nexus/prover-id
 ```
 
-Kalo kalian belum instal `Rust`, nanti akan otomatis diminta instal, cukup tekan `enter` aja. Kalo instal udah siap, jalankan perintah di bawah ini.
+![image](https://github.com/user-attachments/assets/82523934-7d78-4b9c-b651-cc3c4060252f)
+
+
+### 3.3 Run Prover
 
 ```
-. "$HOME/.cargo/env"
+curl https://cli.nexus.xyz/ | sh
 ```
-
-### 3.3 Back up `prover-id`
-
-Setelah berhasil run prover, akan muncul `prover identifier`, simpan itu.
 
 # Tutorial Nexus Prover Web
 
 Klik [`Connect`](https://beta.nexus.xyz) and you good.
 
-![image](https://github.com/user-attachments/assets/de1810ee-b7ff-4345-84e0-8b221b1245f3)
+![image](https://github.com/user-attachments/assets/c794ed79-920f-4bec-9b0b-42c53cfd5119)
 
 ---
 
