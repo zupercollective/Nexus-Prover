@@ -3,7 +3,6 @@ services:
     image: ghcr.io/zuperhunt/nexus-prover:latest
     environment:
       - NONINTERACTIVE=1
-      - RUST_BACKTRACE=full
     volumes:
       - ./storage:/root/.nexus:z
     deploy:

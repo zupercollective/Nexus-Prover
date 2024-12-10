@@ -21,7 +21,10 @@ WORKDIR /root
 COPY --from=builder /app/clients/cli/target/release/prover /root/prover
 # https://github.com/nexus-xyz/network-api/blob/main/clients/cli/src/prover.rs#L171-L174
 # Bajingan memang mereka ga bilang ini file penting
-COPY --from=builder /app/clients/cli/src /root
+COPY --from=builder /app/clients/cli/src /root/src
+
+# Rust ngentot
+RUN apk add --no-cache libgcc
 
 # Lokasi prover-id
 VOLUME /root/.nexus
