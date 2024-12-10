@@ -15,7 +15,8 @@ RUN set -ex; \
   cd /app/clients/cli; \
   cargo build --release --bin prover; \
 
-FROM docker.io/library/alpine:latest AS runner
+FROM docker.io/library/alpine:latest
+WORKDIR /root
 COPY --from=builder /app/clients/cli/target/release/prover /usr/local/bin/prover
 
 # Lokasi prover-id
