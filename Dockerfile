@@ -9,7 +9,7 @@ RUN apk add --no-cache \
   openssl \
   openssl-dev
 
-RUN git clone https://github.com/nexuz-xyz/network-api --depth 1 . 
+RUN git clone https://github.com/nexus-xyz/network-api --depth 1 . 
 
 RUN set -ex; \
   cd /app/clients/cli; \
