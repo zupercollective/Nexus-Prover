@@ -9,7 +9,15 @@ Penulis:
 # Tutorial Nexus Prover CLI
 
 # Docker
-Requirement bisa merujuk pada sectiono di bawah. Cukup clone repository ini, install Docker dengan Docker Compose dan lakukan command di bawah ini:
+> [!NOTE]
+> Requirement bisa merujuk pada section di bawah.
+
+> [!NOTE]
+> Instalasi docker dapat merujuk pada tutorial pada link berikut:
+> 
+> https://github.com/ZuperHunt/Installing-Docker
+
+Cukup clone repository ini, install Docker dengan Docker Compose dan lakukan command di bawah ini:
 ```bash
 # Clone aplikasinya dulu
 git clone https://github.com/ZuperHunt/Nexus-Prover
@@ -20,7 +28,7 @@ cd Nexus-Prover
 # Copy file secretnya
 cp .env.example .env
 
-# Isi secretnya
+# Isi secret dan atur konfigurasinya
 nano .env
 
 # Jalankan server
