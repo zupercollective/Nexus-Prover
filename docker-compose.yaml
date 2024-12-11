@@ -12,5 +12,5 @@ services:
         # Atur limit CPU dan Memory di sini
         # Tipe data harus string
         limits:
-          cpus: '2'
-          memory: '2G'
+          cpus: $CPU_LIMIT
+          memory: $MEM_LIMIT
