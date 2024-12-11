@@ -8,6 +8,12 @@ Penulis:
 
 # Tutorial Nexus Prover CLI
 
+Sebelum ke tutorialnya, kalo kamu belum ngerti gimana cara terhubung ke VPS mu, bisa lihat tutorial yang sudah kami buat [di sini](https://github.com/ZuperHunt/Connect-to-VPS).\
+Tutorial testnet Nexus akan dibagi menjadi 3 bagian:
+1. [CLI dengan Docker Compose](#Docker)
+2. [CLI dengan setup manual](#Manual)
+3. [Web based](#Web)
+
 # Docker
 > [!NOTE]
 > Requirement bisa merujuk pada section di bawah.
@@ -47,11 +53,11 @@ Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
 | Part | Minimum | Recommended |
 | ------------- | ------------- | ------------- |
-| CPU | 1 Core | 2 Core |
+| CPU | 1 Core | 2 Cores |
 | RAM | 1 GB | - |
 | SSD | - | - |
 
-Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
+Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda. Untuk native Windows hanya bisa yang versi web saja, gunakan WSL untuk yang versi CLI.
 
 ## 2. Dependency
 
@@ -101,7 +107,7 @@ mkdir .nexus
 
 ### 3.3 Replace Prover Id
 
-Gunakan **Prover Id** web prover mu, dengan cara tekan **F12** di browser trus cari **Application** dan copy value dari `flutter.proverId`.
+Gunakan **Prover Id** [web prover](https://beta.nexus.xyz) mu, dengan cara tekan **F12** di browser trus cari **Application** dan copy value dari `flutter.proverId`.
 
 ![image](https://github.com/user-attachments/assets/82523934-7d78-4b9c-b651-cc3c4060252f)
 
@@ -111,11 +117,15 @@ Balik ke CLI, jalankan perintah berikut dan isi hanya dengan Prover Id yang baru
 nano $HOME/.nexus/prover-id
 ```
 
+Tekan `ctrl`+`x` untuk menyimpan, lalu akan muncul _yes or no_ ketik saja `Y`, lalu tekan `enter`.
+
 ### 3.4 Run Prover
 
 ```
 curl https://cli.nexus.xyz/ | sh
 ```
+
+Kalo berhasil nanti muncul log `proving`/`proved`, dan akan muncul status CLI pada My Profile di web Nexus. Kamu juga bisa pantau PTS (point) di situ.
 
 # Web
 
