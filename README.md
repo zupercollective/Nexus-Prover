@@ -1,10 +1,8 @@
-Penulis: 
-- [Naufal](https://x.com/0xfal)
-- [d04_1bu as Ikram](https://x.com/d04_1bu)
+Penulis: [Naufal](https://x.com/0xfal), [d04_1bu as Ikram](https://x.com/d04_1bu)
 
 > [!NOTE]
 > **WHAT IS Nexus?**\
-> [Nexus](https://nexus.xyz) is the supercomputer for everyone, powering the world’s most complex computation to build the Verifiable Internet.
+> [Nexus](https://nexus.xyz) is a Layer 3 built on Arbitrum.
 
 # Tutorial Nexus Prover CLI
 
@@ -21,7 +19,7 @@ Tutorial testnet Nexus akan dibagi menjadi 3 bagian:
 > [!NOTE]
 > Instalasi docker dapat merujuk pada tutorial pada link berikut:
 > 
-> https://github.com/ZuperHunt/Installing-Docker
+> https://github.com/ZuperCollective/Installing-Docker
 
 Cukup clone repository ini, install Docker dengan Docker Compose dan lakukan command di bawah ini:
 ```bash
@@ -96,48 +94,27 @@ Ubah `<SESSION_NAME>` menjadi terserahmu.
 tmux new -s <SESSION_NAME>
 ```
 
-### 3.2 Create `.nexus` Directory (Optional)
-
-Cek terlebih dahulu apakah folder `.nexus` sudah ada atau belum menggunakan: `cd .nexus`.\
-Kalo tidak ditemukan, kamu bisa membuatnya dengan perintah berikut:
-
-```
-mkdir .nexus
-```
-
-### 3.3 Replace Prover Id
-
-Gunakan **Prover Id** [web prover](https://beta.nexus.xyz) mu, dengan cara tekan **F12** di browser trus cari **Application** dan copy value dari `flutter.proverId`.
-
-![image](https://github.com/user-attachments/assets/82523934-7d78-4b9c-b651-cc3c4060252f)
-
-Balik ke CLI, jalankan perintah berikut dan isi hanya dengan Prover Id yang barusan dicopy.
-
-```
-nano $HOME/.nexus/prover-id
-```
-
-Tekan `ctrl`+`x` untuk menyimpan, lalu akan muncul _yes or no_ ketik saja `Y`, lalu tekan `enter`.
-
-### 3.4 Run Prover
+### 3.2 Run Prover
 
 ```
 curl https://cli.nexus.xyz/ | sh
 ```
 
-Kalo berhasil nanti muncul log `proving`/`proved`, dan akan muncul status CLI pada My Profile di web Nexus. Kamu juga bisa pantau PTS (point) di situ.
+Akan diminta memasukkan `node ID`, kunjungi https://app.nexus.xyz/nodes untuk mendapatkan punyamu.
+
+![image](https://github.com/user-attachments/assets/8236246c-3adc-4528-a8b0-638bde8a8615)
 
 # Web
 
-Klik [`Connect`](https://beta.nexus.xyz) and you good.
+Klik [`tombol power`](https://app.nexus.xyz/) and you good.
 
-![image](https://github.com/user-attachments/assets/c794ed79-920f-4bec-9b0b-42c53cfd5119)
+![image](https://github.com/user-attachments/assets/289fa802-deeb-4972-b05a-d8aa7e55b332)
 
 ---
 
 Reach us if you have any question:\
-ZuperHunt's [Discord server](https://discord.gg/ZuperHunt) | [X(Twitter)](https://twitter.com/ZuperHunt)
+ZuperCollective's [Discord server](https://discord.gg/ZuperCollective) | [X(Twitter)](https://twitter.com/ZuperCollective)
 
 # Acknowledgements
 
-* [Nexus Docs](https://github.com/nexus-xyz/network-api/blob/main/clients/cli/README.md)
+* [Nexus Docs](https://docs.nexus.xyz/home)
