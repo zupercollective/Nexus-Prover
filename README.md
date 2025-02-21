@@ -42,7 +42,7 @@ docker compose up -d
 # Manual
 Langkah-langkah di bawah bisa kamu eksekusi apabila ingin menjalankan aplikasi ini secara manual.
 
-## 1. Requirement
+## Requirement
 
 Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
@@ -51,11 +51,36 @@ Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
 | Part | Minimum | Recommended |
 | ------------- | ------------- | ------------- |
-| CPU | 1 Core | 2 Cores |
-| RAM | 1 GB | - |
+| CPU | 2 Core | 4 Cores |
+| RAM | 8GB GB | 16GB++ |
 | SSD | - | - |
 
 Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda. Untuk native Windows hanya bisa yang versi web saja, gunakan WSL untuk yang versi CLI.
+
+## 1 Optional
+
+Langkah ini hanya berlaku jika kamu, menggunakan spek VPS minimum. Jika kamu menggunakan spek yang bagus silahkan skip step ini.
+
+### Buat file Swapfile
+`sudo fallocate -l 8G /swapfile`
+
+### Set Perm
+`sudo chmod 600 /swapfile`
+
+### Format
+`sudo mkswap /swapfile`
+
+### Enable
+`sudo swapon /swapfile`
+
+### Enable on boot
+`echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab`
+
+### Cek
+`free`
+
+### Reboot
+`sudo reboot`
 
 ## 2. Dependency
 
