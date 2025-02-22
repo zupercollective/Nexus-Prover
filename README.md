@@ -77,16 +77,24 @@ sudo mkswap /swapfile
 ```
 
 ### Enable
-```sudo swapon /swapfile```
+```
+sudo swapon /swapfile
+```
 
 ### Enable on boot
-```echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab```
+```
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+```
 
 ### Cek
-```free```
+```
+free
+```
 
 ### Reboot
-```sudo reboot```
+```
+sudo reboot
+```
 
 ## 2. Dependency
 
