@@ -62,25 +62,31 @@ Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mun
 Langkah ini hanya berlaku jika kamu, menggunakan spek VPS minimum. Jika kamu menggunakan spek yang bagus silahkan skip step ini.
 
 ### Buat file Swapfile
-`sudo fallocate -l 8G /swapfile`
+```
+sudo fallocate -l 8G /swapfile
+```
 
 ### Set Perm
-`sudo chmod 600 /swapfile`
+```
+sudo chmod 600 /swapfile
+```
 
 ### Format
-`sudo mkswap /swapfile`
+```
+sudo mkswap /swapfile
+```
 
 ### Enable
-`sudo swapon /swapfile`
+```sudo swapon /swapfile```
 
 ### Enable on boot
-`echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab`
+```echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab```
 
 ### Cek
-`free`
+```free```
 
 ### Reboot
-`sudo reboot`
+```sudo reboot```
 
 ## 2. Dependency
 
